@@ -20,4 +20,10 @@ export interface GDPResponse {
   unemployment: number;
   currency: string;
   data_year: number;
+  delta?: number;
+}
+
+export interface GDPDatabase {
+  countries: Record<string, GDPResponse>;
+  globalAverage: GDPDataPoint[];
 }
